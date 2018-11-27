@@ -1,0 +1,74 @@
+<div class="jumbotron mb-5">
+    <div class="container">
+      
+      <h1 class="display-3"><i>Package Uploader </i></h1>
+      <br>
+      <p class="display-4"> Please select the files that you want to upload </p>
+
+    </div>
+  </div>
+
+<div class="container">
+  <div class="container justify-content-center align-self-center">
+    <div class="row">
+
+      <div class="container">
+        <div class="row">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-default">Package Name</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default"
+              [(ngModel)]="name">
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text">Select PDF Files </span>
+            </div>
+            <div class="custom-file">
+              <input type="file" class="custom-file-input" name="fileUplaod" id="fileUpload" accept="application/pdf" #file (change)="onChange(file.files)">
+              <label class="custom-file-label" for="fileUpload">Choose file</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h4>Upload Section</h4>
+    <p> Upload Progress :</p>
+    <div class="row">
+
+        <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Filename</th>
+                <th scope="col">Cancel</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of FilesList; let i = index">
+                <th scope="row" > {{ i + 1 }}</th>
+                <td>{{ item.name}}</td>
+                <td><button type="button" class="btn btn-danger btn-block" (click)="removeFile(item)">Cancel</button></td>
+
+              </tr>
+
+            </tbody>
+          </table>
+
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="progress">
+          <div class="progress-bar bg-success " [ngStyle]="{'width':progress+'%'}"></div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <button type="button" class="btn btn-primary" [disabled]="!CanUpload()" (click)="UploadPackage()">Upload Package</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+/* You can add global styles to this file, and also import other style files */
+html , body , main
+{
+    height : 100%;
+    width: 100%;
+}
+
+.floating-upload-button
+{
+    position: fixed;
+    bottom: 75px;
+    right: 75px;
+    z-index: 1009;
+    max-width: 300px;
+}
+
+.add-border
+{
+    border-style: solid;
+    border-color: white;
+    border-width: 1px;
+    border-radius: 20px;
+    color : white;
+}

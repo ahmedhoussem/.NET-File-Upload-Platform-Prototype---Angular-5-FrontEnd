@@ -1,0 +1,54 @@
+<div class="container">
+  <div class="py-5 text-center">
+    <img class="d-block mx-auto mb-4" src="assets/logo.png" alt="" width="350" height="50">
+    <h2>Create Account</h2>
+    <p class="lead">Below is a form to create a new account to use the file upload service</p>
+  </div>
+
+  <div class="row">
+
+    <div class="col">
+      <h4 class="mb-3">Set account credentials</h4>
+      <div class="needs-validation" novalidate="">
+        
+
+        <div class="mb-3">
+          <label for="username">Username</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">@</span>
+            </div>
+            <input type="text" class="form-control" id="username" placeholder="Username" required="" [(ngModel)]="Username">
+            <div class="invalid-feedback" style="width: 100%;">
+              Your username is required.
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="username">Password</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">@</span>
+            </div>
+            <input type="password" class="form-control" id="password" placeholder="Password" required="" [(ngModel)]="Password">
+            <div class="invalid-feedback" style="width: 100%;">
+              Your username is required.
+            </div>
+          </div>
+        </div>
+
+
+        <hr class="mb-4">
+
+        <hr class="mb-4">
+        <button class="btn btn-primary btn-lg btn-block" [disabled]="!CanCreate()" (click)="AddUser()">Create account</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="my-5 pt-5 text-muted text-center text-small">
+    <p class="mt-5 mb-3 text-muted">© 2018-2019</p>
+    <p class="mb-3 text-muted">Ahmed Houssem ASSAL</p>
+  </footer>
+</div>

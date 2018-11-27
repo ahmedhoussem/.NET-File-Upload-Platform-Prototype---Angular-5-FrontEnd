@@ -1,0 +1,34 @@
+<div class="jumbotron m-0">
+  <div class="container">
+    <h3 class="display-3">Submission For :</h3>
+    <h3 class="display-4"> Test assignment - Software developer position at Mitigram</h3>
+    <p class="text-muted">
+      For this test assignment you should implement an API and a very basic UI for uploading a list of files
+to a database and returning the result of the upload to the user.
+    </p>
+    <br>
+    <p><a class="btn btn-primary btn-lg text-white" role="button">By : Ahmed Houssem Assal</a></p>
+  </div>
+</div>
+<div class="container">
+<div class="text-center row">
+  <div class="form-signin">
+    <img class="mb-4" src="assets/logo.png" alt="" width="350" height="50">
+    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+    <label for="inputEmail" class="sr-only" >Username</label>
+    <input type="email" id="inputEmail" class="form-control" placeholder="Username" [(ngModel)]="Username" required="" autofocus="">
+    <label for="inputPassword" class="sr-only" >Password</label>
+    <input type="password" id="inputPassword" [(ngModel)]="Password" class="form-control" placeholder="Password" required="">
+    
+    <div>
+      Don't have an account ? Click <a [routerLink]="[ '/SignUp' ]"> here</a> to create an account
+    </div>
+    <br>
+    <button class="btn btn-lg btn-primary btn-block" (click)="LoginAction()">Sign in</button>
+    <p class="mt-5 mb-3 text-muted">© 2018-2019</p>
+    <p class="mb-3 text-muted">Ahmed Houssem ASSAL</p>
+  </div>
+
+
+</div>
+</div>
